@@ -1,4 +1,10 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Movie List",
+  description: "Movie List",
+};
 
 const MovieListPage = () => {
   return (

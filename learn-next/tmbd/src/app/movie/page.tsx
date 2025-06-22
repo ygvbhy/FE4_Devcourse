@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MovieList from "@/app/components/movie/MovieList";
+import MovieList from "@/components/movie/MovieList";
 const Home = () => {
   return (
     <>

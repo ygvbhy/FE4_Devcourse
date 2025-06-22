@@ -1,19 +1,27 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 const Header = () => {
+  const pathname = usePathname();
+
+  let titleList = ["상영중", "인기작", "개봉예정"];
+
+  if (pathname.includes("detail")) {
+    titleList = ["홈", "카테고리", "Movie", "Tv"];
+  }
+
   return (
     <header className="header">
       <a href="#">
         <h1 className="header__logo">Wave</h1>
       </a>
       <ul className="header__navi">
-        <li>
-          <a href="#">상영중</a>
-        </li>
-        <li>
-          <a href="#">인기작</a>
-        </li>
-        <li>
-          <a href="#">개봉예정</a>
-        </li>
+        {titleList.map((title, index) => (
+          <li key={index}>
+            <a href="#">{title}</a>
+          </li>
+        ))}
       </ul>
       <div className="header-search">
         <input

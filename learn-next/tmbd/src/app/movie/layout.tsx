@@ -1,5 +1,5 @@
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import Header from "../../components/commons/Header";
+import Footer from "../../components/commons/Footer";
 
 export default function MovieLayout({
   children,

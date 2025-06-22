@@ -1,4 +1,12 @@
-const MovieDetail = () => {
+import { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Movie Detail",
+  description: "Movie Detail",
+};
+
+const MovieDetailPage = () => {
   return (
     <>
       <section className="trailer">
@@ -116,10 +124,12 @@ const MovieDetail = () => {
           <div className="movie-list__item">
             <figure>
               <a href="#">
-                <img
+                <Image
                   src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
                   alt="Civil War 영화 포스터"
                   loading="lazy"
+                  width={300}
+                  height={450}
                 />
               </a>
             </figure>
@@ -138,10 +148,12 @@ const MovieDetail = () => {
           <div className="movie-list__item">
             <figure>
               <a href="#">
-                <img
+                <Image
                   src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
                   alt="Civil War 영화 포스터"
                   loading="lazy"
+                  width={300}
+                  height={450}
                 />
               </a>
             </figure>
@@ -160,10 +172,12 @@ const MovieDetail = () => {
           <div className="movie-list__item">
             <figure>
               <a href="#">
-                <img
+                <Image
                   src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
                   alt="Civil War 영화 포스터"
                   loading="lazy"
+                  width={300}
+                  height={450}
                 />
               </a>
             </figure>
@@ -184,4 +198,4 @@ const MovieDetail = () => {
     </>
   );
 };
-export default MovieDetail;
+export default MovieDetailPage;
