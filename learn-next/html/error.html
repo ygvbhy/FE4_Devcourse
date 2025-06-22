@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500&family=Noto+Sans+KR:wght@400;700&family=Oxygen:wght@400;700&family=Sanchez&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="circular-bar.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="error-container">
+        <!-- Error Icon and Code  -->
+        <div class="error-icon-section">
+          <div class="error-icon-wrapper">
+            <svg
+              class="error-icon"
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Error Title  -->
+        <h1 class="error-title">Error</h1>
+
+        <!-- Error Message  -->
+        <p class="error-message">
+          The page you are looking for might have been removed, had its name
+          changed, or is temporarily unavailable.
+        </p>
+
+        <!-- Action Buttons  -->
+        <div class="action-buttons">
+          <button class="btn btn-primary">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9,22 9,12 15,12 15,22"></polyline>
+            </svg>
+            Go Home
+          </button>
+          <button class="btn btn-secondary">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11 2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"
+              />
+            </svg>
+            Try Again
+          </button>
+          <button class="btn btn-tertiary">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Contact Support
+          </button>
+        </div>
+
+        <!-- Help Section  -->
+        <div class="help-section">
+          <h3 class="help-title">Need Help?</h3>
+          <p class="help-text">
+            If you continue to experience issues, please don`t hesitate to reach
+            out to our support team.
+          </p>
+          <div class="help-links">
+            <a href="#" class="help-link"> Documentation </a>
+            <a href="#" class="help-link"> FAQ </a>
+            <a href="#" class="help-link"> Status Page </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

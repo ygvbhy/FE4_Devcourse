@@ -5,8 +5,13 @@ import Login from "./views/Login";
 import CreatePost from "./views/CreatePost";
 import BlogPost from "./views/BlogPost";
 import NotFound from "./views/NotFound";
-import { fetchUserData } from "./loader/auth.loader";
+import {
+  fetchUserData,
+  requireAuth,
+  requireNotAuth,
+} from "./loader/auth.loader";
 import FullLoading from "../components/common/FullLoading";
+import { fetchPostDetail, fetchPosts } from "./loader/post.loader";
 
 const router = createBrowserRouter([
   {
@@ -17,18 +22,22 @@ const router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
+        loader: fetchPosts,
       },
       {
         path: "/login",
+        loader: requireNotAuth,
         Component: Login,
       },
       {
         path: "/create-post",
+        loader: requireAuth,
         Component: CreatePost,
       },
       {
         path: "/post/:id",
         Component: BlogPost,
+        loader: fetchPostDetail,
       },
     ],
   },

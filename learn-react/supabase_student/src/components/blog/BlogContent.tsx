@@ -1,5 +1,8 @@
 import { Calendar, Clock, Tag } from "lucide-react";
 import Avatar from "../ui/Avatar";
+import { PostDetail } from "../../routes/views/BlogPost";
+import { format } from "date-fns";
+import { readingTime } from "reading-time-estimator";
 
 // Simple markdown parser
 const parseMarkdown = (markdown: string): string => {
@@ -73,48 +76,55 @@ const parseMarkdown = (markdown: string): string => {
   return html;
 };
 
-export default function BlogContent() {
+export default function BlogContent({
+  title,
+  profiles,
+  created_at,
+  content,
+  tags,
+}: PostDetail) {
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          JavaScript data types and data structures
+          {title}
         </h1>
 
         <div className="flex flex-wrap items-center gap-4 mb-6">
           <div className="flex items-center">
             <Avatar
-              src={`https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(
-                "user"
-              )}`}
-              alt={"수야"}
+              src={profiles?.avatar_url || ""}
+              alt={profiles?.username || ""}
               size="md"
             />
-            <span className="ml-2 text-[#c9d1d9]">수야</span>
+            <span className="ml-2 text-[#c9d1d9]">{profiles?.username}</span>
           </div>
 
           <div className="flex items-center text-[#8b949e]">
             <Calendar size={16} className="mr-1" />
-            <span>2025.05.22</span>
+            <span>{format(new Date(created_at), "yyyy-MM-dd HH:mm")}</span>
           </div>
 
           <div className="flex items-center text-[#8b949e]">
             <Clock size={16} className="mr-1" />
-            <span>5 min</span>
+            <span>{readingTime(content!).text}</span>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <div className="flex items-center bg-[#161B22] text-[#58a6ff] px-2.5 py-1 rounded-full text-xs">
-            <Tag size={12} className="mr-1" />
-            아침
-          </div>
+          {tags &&
+            tags.split(",").map((tag: string) => (
+              <div className="flex items-center bg-[#161B22] text-[#58a6ff] px-2.5 py-1 rounded-full text-xs">
+                <Tag size={12} className="mr-1" />
+                {tag}
+              </div>
+            ))}
         </div>
       </header>
 
       <div
         className="prose prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: parseMarkdown("lorem") }}
+        dangerouslySetInnerHTML={{ __html: parseMarkdown(content) }}
       />
     </article>
   );

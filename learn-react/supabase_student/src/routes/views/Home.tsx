@@ -1,7 +1,13 @@
 import BlogHeader from "../../components/blog/BlogHeader";
 import BlogCard from "../../components/blog/BlogCard";
+import { useLoaderData } from "react-router";
+import { fetchPosts } from "../loader/post.loader";
+
+export type Posts = Awaited<ReturnType<typeof fetchPosts>>;
 
 export default function Home() {
+  const posts = useLoaderData<Posts>();
+
   return (
     <>
       <div className="min-h-screen bg-[#0D1117]">
@@ -15,18 +21,19 @@ export default function Home() {
           </div>
 
           <div className="flex justify-between items-center mb-6">
-            <span className="text-[#8b949e]">10 posts</span>
+            <span className="text-[#8b949e]">{posts?.length || 0} posts</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <BlogCard />
+            {posts && posts.map((post) => <BlogCard key={post.id} {...post} />)}
 
-            {/* <div className="col-span-2 text-center py-12">
-              <h3 className="text-xl font-medium text-white mb-2">
-                No posts found
-              </h3>
-              <p className="text-[#8b949e]">Try adjusting your search query</p>
-            </div> */}
+            {posts && posts.length === 0 && (
+              <div className="col-span-2 text-center py-12">
+                <h3 className="text-xl font-medium text-white mb-2">
+                  No posts found
+                </h3>
+              </div>
+            )}
           </div>
         </div>
       </div>

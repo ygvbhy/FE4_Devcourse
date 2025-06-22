@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500&family=Noto+Sans+KR:wght@400;700&family=Oxygen:wght@400;700&family=Sanchez&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="circular-bar.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#"><h1 class="header__logo">Wave</h1></a>
+      <ul class="header__navi">
+        <li>
+          <a href="#">상영중</a>
+        </li>
+        <li>
+          <a href="#">인기작</a>
+        </li>
+        <li>
+          <a href="#">개봉예정</a>
+        </li>
+      </ul>
+      <div class="header-search">
+        <input
+          type="text"
+          class="header-search__input"
+          placeholder="제목으로 찾아보세요."
+        />
+        <span class="material-symbols-outlined icon"> search </span>
+      </div>
+    </header>
+    <nav class="navigator">
+      <ul class="navigator-list">
+        <li class="navigator-list__item">
+          <img
+            src="assets/icons/home.png"
+            alt=""
+            class="navigator-list__icon"
+          />
+          <strong class="navigator-list__txt">메인</strong>
+        </li>
+        <li class="navigator-list__item">
+          <img
+            src="assets/icons/live.png"
+            alt=""
+            class="navigator-list__icon"
+          />
+          <strong class="navigator-list__txt">상영중</strong>
+        </li>
+        <li class="navigator-list__item">
+          <img
+            src="assets/icons/popluar.png"
+            alt=""
+            class="navigator-list__icon"
+          />
+          <strong class="navigator-list__txt">인기작</strong>
+        </li>
+
+        <li class="navigator-list__item">
+          <img
+            src="assets/icons/video.png"
+            alt=""
+            class="navigator-list__icon"
+          />
+          <strong class="navigator-list__txt">개봉예정</strong>
+        </li>
+        <li class="navigator-list__item">
+          <img
+            src="assets/icons/search.png"
+            alt=""
+            class="navigator-list__icon"
+          />
+          <strong class="navigator-list__txt">검색</strong>
+        </li>
+      </ul>
+    </nav>
+    <section class="search-box">
+      <div class="search-input">
+        <div class="search-wrap">
+          <button>x</button>
+          <input
+            type="text"
+            placeholder="영화 제목을 입력하세요"
+            autocomplete="off"
+          />
+          <span class="material-symbols-outlined icon"> search </span>
+        </div>
+      </div>
+    </section>
+    <section class="release">
+      <div
+        class="release-item"
+        style="
+          background-image: url('https://image.tmdb.org/t/p/w500//t5zCBSB5xMDKcDqe91qahCOUYVV.jpg');
+        "
+      >
+        <div class="release__text">
+          <strong class="release__category">NEW RELEASE</strong>
+          <h2 class="release__title">Soviet : The Cold War</h2>
+          <p class="release__desc">
+            Her senses grow sharper, her thinking clearer, and for the first
+            time in her life she feels herself fully in control. By the age of
+            sixteen, she's competing for the U.S.
+          </p>
+          <button class="release__btn">자세히보기</button>
+        </div>
+      </div>
+    </section>
+    <section class="movie">
+      <h3 class="movie-category">Now Movies</h3>
+      <h4 class="movie-subtext">상영중인 영화 <a href="#">더보기</a></h4>
+      <div class="movie-list">
+        <div class="movie-list__item">
+          <a href="#" class="skeleton-list-item ui0"> </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//gqkJSh8pqMdiWwPfRNJGQkuivDi.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="movie">
+      <h3 class="movie-category">Now Popular</h3>
+      <h4 class="movie-subtext">인기있는 영화 <a href="#">더보기</a></h4>
+      <div class="movie-list">
+        <div class="movie-list__item">
+          <a href="#" class="skeleton-list-item ui0"> </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//gqkJSh8pqMdiWwPfRNJGQkuivDi.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="movie">
+      <h3 class="movie-category">UP Comming</h3>
+      <h4 class="movie-subtext">개봉예정 영화 <a href="#">더보기</a></h4>
+      <div class="movie-list">
+        <div class="movie-list__item">
+          <a href="#" class="skeleton-list-item ui0"> </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//gqkJSh8pqMdiWwPfRNJGQkuivDi.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="movie">
+      <h3 class="movie-category">TOP Rated</h3>
+      <h4 class="movie-subtext">
+        높은 평점을 받은 영화 <a href="#">더보기</a>
+      </h4>
+      <div class="movie-list">
+        <div class="movie-list__item">
+          <a href="#" class="skeleton-list-item ui0"> </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//gqkJSh8pqMdiWwPfRNJGQkuivDi.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+        <div class="movie-list__item">
+          <a href="#">
+            <figure>
+              <img
+                src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="movie-list__txt">
+              <div class="progress-circle p50">
+                <span>10%</span>
+                <div class="left-half-clipper">
+                  <div class="first50-bar"></div>
+                  <div class="value-bar"></div>
+                </div>
+              </div>
+              <strong class="movie-list__title">Civil War</strong>
+              <span class="release_date">2023.11.21</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>copyright @ sucoding vuejs course</p>
+    </footer>
+  </body>
+</html>

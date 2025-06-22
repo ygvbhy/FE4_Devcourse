@@ -1,0 +1,222 @@
+<!DOCTYPE html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500&family=Noto+Sans+KR:wght@400;700&family=Oxygen:wght@400;700&family=Sanchez&family=Sedgwick+Ave+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="circular-bar.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__logo">Wave</h1>
+    <ul class="header__navi">
+      <li>
+        <a href="#">홈</a>
+      </li>
+      <li>
+        <a href="#">마테고리</a>
+      </li>
+      <li>
+        <a href="#">Movie</a>
+      </li>
+      <li>
+        <a href="#">Tv</a>
+      </li>
+    </ul>
+    <div class="header-search">
+      <input
+        type="text"
+        class="header-search__input"
+        placeholder="제목으로 찾아보세요."
+      />
+      <span class="material-symbols-outlined icon"> search </span>
+    </div>
+  </header>
+  <section class="trailer">
+    <!-- <iframe
+      width="900"
+      height="506"
+      src="https://www.youtube.com/embed/iIxkC4ap8aU?si=FDVIRTdUuTZr3DgM"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe> -->
+    <iframe
+      class="skeleton-list-item"
+      width="900"
+      height="506"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </section>
+  <section class="detail">
+    <!-- <div class="detail-wrap">
+      <div class="detail-info">
+        <h2 class="detail-title">Best Game</h2>
+        <ul class="detail-features">
+          <li class="features-item">
+            <div class="progress-circle p50">
+              <span>10%</span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+          </li>
+          <li class="features-item">코미디</li>
+          <li class="features-item">1h 51m</li>
+        </ul>
+        <p class="detail-desc">
+          Based on Edgar Allan Poe's classic bone-chilling tale, this bloody
+          story will have you sleeping with the lights on for years to come.
+        </p>
+        <ul class="detail-maker">
+          <li>
+            <strong>Director</strong>
+            :
+            <span>Chirst Michels</span>
+          </li>
+          <li>
+            <strong>Casting</strong>
+            :
+            <span>Tom Blyth•Rachel Zegler•Peter Dinklage•Jason Schwartzman•Hunter Schafer</span>
+          </li>
+          <li>
+            <strong>Production</strong>
+            :
+            <span>Studio Dragon</span>
+          </li>
+        </ul>
+      </div>
+      <div class="detail-poster">
+        <img
+          src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
+          alt=""
+        />
+      </div>
+    </div> -->
+    <div class="detail-wrap">
+      <div class="detail-info">
+        <h2 class="detail-title skeleton-list-item ui3"></h2>
+        <ul class="detail-features skeleton-list-item ui4"></ul>
+        <p class="skeleton-list-item ui4"></p>
+        <ul class="detail-maker">
+          <li class="skeleton-list-item ui5"></li>
+          <li class="skeleton-list-item ui5"></li>
+          <li class="skeleton-list-item ui5"></li>
+        </ul>
+      </div>
+      <div class="detail-poster">
+        <a href="#" class="skeleton-list-item ui0"></a>
+      </div>
+    </div>
+  </section>
+  <section class="movie detail-movie">
+    <h3 class="movie-category">Relative Movies</h3>
+    <h4 class="movie-subtext">비슷한 장르의 영화</h4>
+    <div class="movie-list">
+      <!-- <div class="movie-list__item">
+        <a href="#">
+          <figure>
+            <img
+              src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+              alt=""
+            />
+          </figure>
+          <div class="movie-list__txt">
+            <div class="progress-circle p50">
+              <span>10%</span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+            <strong class="movie-list__title">Civil War</strong>
+            <span class="release_date">2023.11.21</span>
+          </div>
+        </a>
+      </div> -->
+      <div class="movie-list__item">
+        <a href="#" class="skeleton-list-item ui0"> </a>
+      </div>
+      <div class="movie-list__item">
+        <figure>
+          <a href="#">
+            <img
+              src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <div class="movie-list__txt">
+          <div class="progress-circle p50">
+            <span>10%</span>
+            <div class="left-half-clipper">
+              <div class="first50-bar"></div>
+              <div class="value-bar"></div>
+            </div>
+          </div>
+          <strong class="movie-list__title">Civil War</strong>
+          <span class="movie-list__release">2023.11.21</span>
+        </div>
+      </div>
+      <div class="movie-list__item">
+        <figure>
+          <a href="#">
+            <img
+              src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <div class="movie-list__txt">
+          <div class="progress-circle p50">
+            <span>10%</span>
+            <div class="left-half-clipper">
+              <div class="first50-bar"></div>
+              <div class="value-bar"></div>
+            </div>
+          </div>
+          <strong class="movie-list__title">Civil War</strong>
+          <span class="movie-list__release">2023.11.21</span>
+        </div>
+      </div>
+      <div class="movie-list__item">
+        <figure>
+          <a href="#">
+            <img
+              src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+              alt=""
+            />
+          </a>
+        </figure>
+        <div class="movie-list__txt">
+          <div class="progress-circle p50">
+            <span>10%</span>
+            <div class="left-half-clipper">
+              <div class="first50-bar"></div>
+              <div class="value-bar"></div>
+            </div>
+          </div>
+          <strong class="movie-list__title">Civil War</strong>
+          <span class="movie-list__release">2023.11.21</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>copyright @ sucoding vuejs course</p>
+  </footer>
+</body>
