@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const MovieList = () => {
   return (
     <div className="movie-list">
@@ -9,10 +11,12 @@ const MovieList = () => {
       <div className="movie-list__item">
         <a href="#">
           <figure>
-            <img
+            <Image
               src="https://image.tmdb.org/t/p/w300/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
               alt=""
               loading="lazy"
+              width={300}
+              height={450}
             />
           </figure>
           <div className="movie-list__txt">
@@ -31,10 +35,12 @@ const MovieList = () => {
       <div className="movie-list__item">
         <a href="#">
           <figure>
-            <img
+            <Image
               src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
               alt=""
               loading="lazy"
+              width={300}
+              height={450}
             />
           </figure>
           <div className="movie-list__txt">
@@ -53,10 +59,12 @@ const MovieList = () => {
       <div className="movie-list__item">
         <a href="#">
           <figure>
-            <img
+            <Image
               src="https://image.tmdb.org/t/p/w500//gqkJSh8pqMdiWwPfRNJGQkuivDi.jpg"
               alt=""
               loading="lazy"
+              width={300}
+              height={450}
             />
           </figure>
           <div className="movie-list__txt">
@@ -75,10 +83,12 @@ const MovieList = () => {
       <div className="movie-list__item">
         <a href="#">
           <figure>
-            <img
+            <Image
               src="https://image.tmdb.org/t/p/w500//clJYtRBUhDtvKhPk2HNfXouviKF.jpg"
               alt=""
               loading="lazy"
+              width={300}
+              height={450}
             />
           </figure>
           <div className="movie-list__txt">
